@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callstack</title>
+</head>
+<body>
+<p id="yeg"></p>
+<script>
+function first(a,b){
+    var a = 10
+    var b = 20
+    return (a+b);
+}
+function second(a,b){
+    return first(a+b)*2;
+}
+function third(a,b){
+    return second(a+b)/2;
+}
+let result = third();
+document.getElementById("yeg").innerHTML = result;
+</script>
+</body>
+</html>
